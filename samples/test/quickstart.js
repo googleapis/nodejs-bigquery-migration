@@ -43,6 +43,6 @@ describe('Quickstart', () => {
       `node ./quickstart.js projects/${projectId}/locations/us`,
       {cwd}
     );
-    assert(stdout, stdout !== null);
+    assert.deepStrictEqual(stdout, '');
   });
 });
