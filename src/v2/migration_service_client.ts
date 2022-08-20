@@ -28,7 +28,6 @@ import {
 } from 'google-gax';
 
 import {Transform} from 'stream';
-import {RequestType} from 'google-gax/build/src/apitypes';
 import * as protos from '../../protos/protos';
 import jsonProtos = require('../../protos/protos.json');
 /**
@@ -268,7 +267,8 @@ export class MigrationServiceClient {
       const apiCall = this._gaxModule.createApiCall(
         callPromise,
         this._defaults[methodName],
-        descriptor
+        descriptor,
+        this._opts.fallback
       );
 
       this.innerApiCalls[methodName] = apiCall;
@@ -999,7 +999,7 @@ export class MigrationServiceClient {
     const callSettings = defaultCallSettings.merge(options);
     this.initialize();
     return this.descriptors.page.listMigrationWorkflows.createStream(
-      this.innerApiCalls.listMigrationWorkflows as gax.GaxCall,
+      this.innerApiCalls.listMigrationWorkflows as GaxCall,
       request,
       callSettings
     );
@@ -1055,7 +1055,7 @@ export class MigrationServiceClient {
     this.initialize();
     return this.descriptors.page.listMigrationWorkflows.asyncIterate(
       this.innerApiCalls['listMigrationWorkflows'] as GaxCall,
-      request as unknown as RequestType,
+      request as {},
       callSettings
     ) as AsyncIterable<protos.google.cloud.bigquery.migration.v2.IMigrationWorkflow>;
   }
@@ -1220,7 +1220,7 @@ export class MigrationServiceClient {
     const callSettings = defaultCallSettings.merge(options);
     this.initialize();
     return this.descriptors.page.listMigrationSubtasks.createStream(
-      this.innerApiCalls.listMigrationSubtasks as gax.GaxCall,
+      this.innerApiCalls.listMigrationSubtasks as GaxCall,
       request,
       callSettings
     );
@@ -1280,7 +1280,7 @@ export class MigrationServiceClient {
     this.initialize();
     return this.descriptors.page.listMigrationSubtasks.asyncIterate(
       this.innerApiCalls['listMigrationSubtasks'] as GaxCall,
-      request as unknown as RequestType,
+      request as {},
       callSettings
     ) as AsyncIterable<protos.google.cloud.bigquery.migration.v2.IMigrationSubtask>;
   }
