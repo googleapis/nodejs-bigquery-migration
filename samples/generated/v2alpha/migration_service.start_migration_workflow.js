@@ -35,7 +35,7 @@ function main(name) {
   // const name = 'abc123'
 
   // Imports the Migration library
-  const {MigrationServiceClient} = require('@google-cloud/migration').v2alpha;
+  const {MigrationServiceClient} = require('@google-cloud/bigquery-migration').v2alpha;
 
   // Instantiates a client
   const migrationClient = new MigrationServiceClient();
