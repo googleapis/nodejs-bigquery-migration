@@ -4026,48 +4026,62 @@
                                 while (reader.pos < end) {
                                     var tag = reader.uint32();
                                     switch (tag >>> 3) {
-                                    case 1:
-                                        message.bigqueryDialect = $root.google.cloud.bigquery.migration.v2.BigQueryDialect.decode(reader, reader.uint32());
-                                        break;
-                                    case 2:
-                                        message.hiveqlDialect = $root.google.cloud.bigquery.migration.v2.HiveQLDialect.decode(reader, reader.uint32());
-                                        break;
-                                    case 3:
-                                        message.redshiftDialect = $root.google.cloud.bigquery.migration.v2.RedshiftDialect.decode(reader, reader.uint32());
-                                        break;
-                                    case 4:
-                                        message.teradataDialect = $root.google.cloud.bigquery.migration.v2.TeradataDialect.decode(reader, reader.uint32());
-                                        break;
-                                    case 5:
-                                        message.oracleDialect = $root.google.cloud.bigquery.migration.v2.OracleDialect.decode(reader, reader.uint32());
-                                        break;
-                                    case 6:
-                                        message.sparksqlDialect = $root.google.cloud.bigquery.migration.v2.SparkSQLDialect.decode(reader, reader.uint32());
-                                        break;
-                                    case 7:
-                                        message.snowflakeDialect = $root.google.cloud.bigquery.migration.v2.SnowflakeDialect.decode(reader, reader.uint32());
-                                        break;
-                                    case 8:
-                                        message.netezzaDialect = $root.google.cloud.bigquery.migration.v2.NetezzaDialect.decode(reader, reader.uint32());
-                                        break;
-                                    case 9:
-                                        message.azureSynapseDialect = $root.google.cloud.bigquery.migration.v2.AzureSynapseDialect.decode(reader, reader.uint32());
-                                        break;
-                                    case 10:
-                                        message.verticaDialect = $root.google.cloud.bigquery.migration.v2.VerticaDialect.decode(reader, reader.uint32());
-                                        break;
-                                    case 11:
-                                        message.sqlServerDialect = $root.google.cloud.bigquery.migration.v2.SQLServerDialect.decode(reader, reader.uint32());
-                                        break;
-                                    case 12:
-                                        message.postgresqlDialect = $root.google.cloud.bigquery.migration.v2.PostgresqlDialect.decode(reader, reader.uint32());
-                                        break;
-                                    case 13:
-                                        message.prestoDialect = $root.google.cloud.bigquery.migration.v2.PrestoDialect.decode(reader, reader.uint32());
-                                        break;
-                                    case 14:
-                                        message.mysqlDialect = $root.google.cloud.bigquery.migration.v2.MySQLDialect.decode(reader, reader.uint32());
-                                        break;
+                                    case 1: {
+                                            message.bigqueryDialect = $root.google.cloud.bigquery.migration.v2.BigQueryDialect.decode(reader, reader.uint32());
+                                            break;
+                                        }
+                                    case 2: {
+                                            message.hiveqlDialect = $root.google.cloud.bigquery.migration.v2.HiveQLDialect.decode(reader, reader.uint32());
+                                            break;
+                                        }
+                                    case 3: {
+                                            message.redshiftDialect = $root.google.cloud.bigquery.migration.v2.RedshiftDialect.decode(reader, reader.uint32());
+                                            break;
+                                        }
+                                    case 4: {
+                                            message.teradataDialect = $root.google.cloud.bigquery.migration.v2.TeradataDialect.decode(reader, reader.uint32());
+                                            break;
+                                        }
+                                    case 5: {
+                                            message.oracleDialect = $root.google.cloud.bigquery.migration.v2.OracleDialect.decode(reader, reader.uint32());
+                                            break;
+                                        }
+                                    case 6: {
+                                            message.sparksqlDialect = $root.google.cloud.bigquery.migration.v2.SparkSQLDialect.decode(reader, reader.uint32());
+                                            break;
+                                        }
+                                    case 7: {
+                                            message.snowflakeDialect = $root.google.cloud.bigquery.migration.v2.SnowflakeDialect.decode(reader, reader.uint32());
+                                            break;
+                                        }
+                                    case 8: {
+                                            message.netezzaDialect = $root.google.cloud.bigquery.migration.v2.NetezzaDialect.decode(reader, reader.uint32());
+                                            break;
+                                        }
+                                    case 9: {
+                                            message.azureSynapseDialect = $root.google.cloud.bigquery.migration.v2.AzureSynapseDialect.decode(reader, reader.uint32());
+                                            break;
+                                        }
+                                    case 10: {
+                                            message.verticaDialect = $root.google.cloud.bigquery.migration.v2.VerticaDialect.decode(reader, reader.uint32());
+                                            break;
+                                        }
+                                    case 11: {
+                                            message.sqlServerDialect = $root.google.cloud.bigquery.migration.v2.SQLServerDialect.decode(reader, reader.uint32());
+                                            break;
+                                        }
+                                    case 12: {
+                                            message.postgresqlDialect = $root.google.cloud.bigquery.migration.v2.PostgresqlDialect.decode(reader, reader.uint32());
+                                            break;
+                                        }
+                                    case 13: {
+                                            message.prestoDialect = $root.google.cloud.bigquery.migration.v2.PrestoDialect.decode(reader, reader.uint32());
+                                            break;
+                                        }
+                                    case 14: {
+                                            message.mysqlDialect = $root.google.cloud.bigquery.migration.v2.MySQLDialect.decode(reader, reader.uint32());
+                                            break;
+                                        }
                                     default:
                                         reader.skipType(tag & 7);
                                         break;
@@ -6589,6 +6603,21 @@
                                 return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
                             };
     
+                            /**
+                             * Gets the default type url for PostgresqlDialect
+                             * @function getTypeUrl
+                             * @memberof google.cloud.bigquery.migration.v2.PostgresqlDialect
+                             * @static
+                             * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                             * @returns {string} The default type url
+                             */
+                            PostgresqlDialect.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+                                if (typeUrlPrefix === undefined) {
+                                    typeUrlPrefix = "type.googleapis.com";
+                                }
+                                return typeUrlPrefix + "/google.cloud.bigquery.migration.v2.PostgresqlDialect";
+                            };
+    
                             return PostgresqlDialect;
                         })();
     
@@ -6749,6 +6778,21 @@
                                 return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
                             };
     
+                            /**
+                             * Gets the default type url for PrestoDialect
+                             * @function getTypeUrl
+                             * @memberof google.cloud.bigquery.migration.v2.PrestoDialect
+                             * @static
+                             * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                             * @returns {string} The default type url
+                             */
+                            PrestoDialect.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+                                if (typeUrlPrefix === undefined) {
+                                    typeUrlPrefix = "type.googleapis.com";
+                                }
+                                return typeUrlPrefix + "/google.cloud.bigquery.migration.v2.PrestoDialect";
+                            };
+    
                             return PrestoDialect;
                         })();
     
@@ -6907,6 +6951,21 @@
                              */
                             MySQLDialect.prototype.toJSON = function toJSON() {
                                 return this.constructor.toObject(this, $protobuf.util.toJSONOptions);
+                            };
+    
+                            /**
+                             * Gets the default type url for MySQLDialect
+                             * @function getTypeUrl
+                             * @memberof google.cloud.bigquery.migration.v2.MySQLDialect
+                             * @static
+                             * @param {string} [typeUrlPrefix] your custom typeUrlPrefix(default "type.googleapis.com")
+                             * @returns {string} The default type url
+                             */
+                            MySQLDialect.getTypeUrl = function getTypeUrl(typeUrlPrefix) {
+                                if (typeUrlPrefix === undefined) {
+                                    typeUrlPrefix = "type.googleapis.com";
+                                }
+                                return typeUrlPrefix + "/google.cloud.bigquery.migration.v2.MySQLDialect";
                             };
     
                             return MySQLDialect;
